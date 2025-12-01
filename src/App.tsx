@@ -2,7 +2,7 @@
 import React from "react";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
-import "/public/assets/css/particles.css"; 
+import "./particles.css"; 
 
 const App: React.FC = () => {
   return (
