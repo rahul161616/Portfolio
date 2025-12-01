@@ -75,17 +75,12 @@ const App: React.FC = () => {
         <div 
           id="hacker-logo" 
           className="lg:mt-0 lg:col-span-5 lg:flex relative z-10"
-          style={{ opacity: 0 }}  // This ensures it's initially invisible but still rendered
         >
-          {/* REPLACE THIS IMG WITH YOUR NEW SVG */}
-          {/* OLD IMAGE: ./assets/images/hacker.png */}
-          {/* PUT YOUR NEW SVG CODE HERE */}
           <img
-            src="public/assets/images/man-developing-website-on-desk.svg"
+            src="./assets/images/man-developing-website-on-desk.svg"
             alt="Hero illustration"
             className="w-full h-auto lg:h-96 xl:h-[500px] 2xl:h-[500px]"
           />
-          {/* UPDATE FILENAME: Change 'your-svg-file.svg' to your actual SVG filename */}
         </div>
       </div>
     </section>
