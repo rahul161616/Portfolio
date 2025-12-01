@@ -60,7 +60,6 @@ export default defineConfig({
       }
     }
   },
-  base: './',
   publicDir: 'public',
   resolve: {
     alias: {
