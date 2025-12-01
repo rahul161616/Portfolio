@@ -2,7 +2,8 @@
 import React from "react";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
-import "./particles.css"; 
+import "./particles.css";
+import heroImage from "/assets/images/man-developing-website-on-desk.svg"; 
 
 const App: React.FC = () => {
   return (
@@ -60,7 +61,7 @@ const App: React.FC = () => {
             </svg>
           </a>
           <a
-            href="./assets/documents/Rahul_Sewa_2025.pdf"
+            href="./assets/documents/RahulSewa20205.pdf"
             download
             target="_blank"
             rel="noopener noreferrer"
@@ -77,7 +78,7 @@ const App: React.FC = () => {
           className="lg:mt-0 lg:col-span-5 lg:flex relative z-10"
         >
           <img
-            src="./assets/images/man-developing-website-on-desk.svg"
+            src={heroImage}
             alt="Hero illustration"
             className="w-full h-auto lg:h-96 xl:h-[500px] 2xl:h-[500px]"
           />
@@ -127,7 +128,7 @@ const App: React.FC = () => {
                 My approach combines creative problem-solving with rigorous methodology, ensuring comprehensive security assessments and robust solutions that protect digital assets effectively.
               </p>
               <a 
-                href="./assets/documents/Rahul_Sewa_2025.pdf" 
+                href="./assets/documents/RahulSewa20205.pdf" 
                 download="Rahul_Sewa_CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
