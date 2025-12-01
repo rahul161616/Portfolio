@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookTheThing - Enterprise Microservices Booking Platform | Rahul Sewa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="bg-white dark:bg-gray-900 shadow-lg sticky top-0 z-50 border-b border-gray-200 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="../index.html" class="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
+                        ← Back to Portfolio
+                    </a>
+                </div>
+                <div class="flex items-center space-x-8">
+                    <a href="#overview" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">Overview</a>
+                    <a href="#architecture" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">Architecture</a>
+                    <a href="#features" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">Features</a>
+                    <a href="#technology" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">Technology</a>
+                    <a href="#gallery" class="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors font-medium">Gallery</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Main Content -->
+            <div class="lg:col-span-2">
+                <!-- Overview Section -->
+                <section id="overview" class="mb-12">
+                    <div class="flex items-center mb-6">
+                        <svg class="w-10 h-10 mr-4 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M19 7h-3V6a4 4 0 0 0-8 0v1H5a1 1 0 0 0-1 1v11a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V8a1 1 0 0 0-1-1zM10 6a2 2 0 0 1 4 0v1h-4V6zm8 13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V9h2v1a1 1 0 0 0 2 0V9h4v1a1 1 0 0 0 2 0V9h2v10z"/>
+                        </svg>
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white">BookTheThing</h1>
+                    </div>
+                    
+                    <!-- Badges -->
+                    <div class="flex flex-wrap gap-2 mb-6">
+                        <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">Java 21</span>
+                        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">Spring Boot 4.0.0</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">PostgreSQL 17</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">Docker Enabled</span>
+                        <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">Build Passing</span>
+                    </div>
+
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 mb-8">
+                        <h2 class="text-2xl font-semibold mb-4 text-blue-600">Enterprise Microservices Booking Platform</h2>
+                        <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">
+                            A <strong>production-ready, enterprise-grade microservices platform</strong> for multi-tenant booking management 
+                            with real-time availability, automated workflows, and comprehensive vendor management.
+                        </p>
+                        
+                        <div class="bg-blue-100 dark:bg-blue-900 rounded-lg p-4 mt-6">
+                            <h3 class="text-xl font-semibold mb-3 text-blue-800 dark:text-blue-200">Production Ready Features</h3>
+                            <ul class="list-disc list-inside text-blue-700 dark:text-blue-300 space-y-1">
+                                <li>Complete End-to-End Testing (100% workflow success)</li>
+                                <li>Container Orchestration with Docker Compose</li>
+                                <li>Health Monitoring across all services</li>
+                                <li>Security Implementation with JWT and RBAC</li>
+                                <li>Service Isolation with independent deployments</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Architecture Section -->
+                <section id="architecture" class="mb-12">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Architecture Overview</h2>
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 mb-8">
+                        <p class="text-lg text-gray-700 dark:text-gray-300 mb-6">
+                            BookTheThing follows a <strong>distributed microservices architecture</strong> with <strong>domain-driven design principles</strong>, 
+                            featuring 6 independent services orchestrated through an API Gateway pattern.
+                        </p>
+                        
+                        <div class="bg-gray-900 dark:bg-gray-700 rounded-lg p-4 mb-6 overflow-x-auto">
+                            <pre class="text-green-400 text-sm"><code>                    ┌─────────────┐
+                    │ API Gateway │
+                    │   :8080     │
+                    └─────────────┘
+                           │
+           ┌───────────────┼───────────────┐
+           │               │               │
+           ▼               ▼               ▼
+   ┌──────────────┐ ┌──────────────┐ ┌─────────────┐
+   │ Auth Service │ │User Service  │ │  Metadata   │
+   │    :8081     │ │    :8083     │ │  Service    │
+   └──────────────┘ └──────────────┘ │   :8084     │
+           │               │         └─────────────┘
+           │               │                 │
+           └───────────────┼─────────────────┘
+                          │
+                          ▼
+                ┌──────────────────┐
+                │Booking Orchestr. │
+                │      :8086       │
+                └──────────────────┘
+                          │
+                          ▼
+                ┌─────────────────┐
+                │ Futsal Service  │
+                │     :8087       │
+                └─────────────────┘</code></pre>
+                        </div>
+
+                        <h3 class="text-xl font-semibold mb-4 text-blue-600">Core Services</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div class="bg-white dark:bg-gray-700 rounded-lg p-4 border border-gray-200 dark:border-gray-600">
+                                <h4 class="font-semibold text-blue-600 mb-2">API Gateway (8080)</h4>
+                                <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-1">
+                                    <li>• Spring Cloud Gateway routing</li>
+                                    <li>• JWT Authentication & RBAC</li>
+                                    <li>• Rate limiting & security</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white dark:bg-gray-700 rounded-lg p-4 border border-gray-200 dark:border-gray-600">
+                                <h4 class="font-semibold text-green-600 mb-2">Auth Service (8081)</h4>
+                                <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-1">
+                                    <li>• JWT Token Management</li>
+                                    <li>• User Registration & Auth</li>
+                                    <li>• Role-Based Authorization</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white dark:bg-gray-700 rounded-lg p-4 border border-gray-200 dark:border-gray-600">
+                                <h4 class="font-semibold text-purple-600 mb-2">User Service (8083)</h4>
+                                <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-1">
+                                    <li>• User Profile Management</li>
+                                    <li>• Vendor Metadata & Scheduling</li>
+                                    <li>• Service Registration</li>
+                                </ul>
+                            </div>
+                            <div class="bg-white dark:bg-gray-700 rounded-lg p-4 border border-gray-200 dark:border-gray-600">
+                                <h4 class="font-semibold text-orange-600 mb-2">Booking Orchestrator (8086)</h4>
+                                <ul class="text-sm text-gray-600 dark:text-gray-300 space-y-1">
+                                    <li>• Business Process Orchestration</li>
+                                    <li>• Complex Workflow Management</li>
+                                    <li>• Business Rule Engine</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Features Section -->
+                <section id="features" class="mb-12">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Key Features</h2>
+                    <div class="grid grid-cols-1 gap-6">
+                        <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border-l-4 border-blue-500">
+                            <h3 class="text-xl font-semibold mb-3 text-blue-800 dark:text-blue-300">🔐 Enterprise Security</h3>
+                            <ul class="text-gray-700 dark:text-gray-300 space-y-2">
+                                <li>• JWT-Based Authentication with automatic token propagation</li>
+                                <li>• Role-Based Access Control with fine-grained permissions</li>
+                                <li>• API Gateway Security with request validation</li>
+                                <li>• Service-to-Service Authentication with header injection</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-green-50 dark:bg-green-900/20 rounded-lg p-6 border-l-4 border-green-500">
+                            <h3 class="text-xl font-semibold mb-3 text-green-800 dark:text-green-300">📅 Dynamic Availability System</h3>
+                            <ul class="text-gray-700 dark:text-gray-300 space-y-2">
+                                <li>• Real-Time Scheduling with vendor-configurable hours</li>
+                                <li>• Blocked Dates management for holidays/maintenance</li>
+                                <li>• Special Event Hours with custom scheduling</li>
+                                <li>• Conflict Prevention with double-booking protection</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6 border-l-4 border-purple-500">
+                            <h3 class="text-xl font-semibold mb-3 text-purple-800 dark:text-purple-300">🔄 Workflow Automation</h3>
+                            <ul class="text-gray-700 dark:text-gray-300 space-y-2">
+                                <li>• Complete Booking Lifecycle: Registration → Application → Approval → Service Setup → Booking</li>
+                                <li>• Automated Status Transitions: PENDING → APPROVED → REJECTED → CANCELLED</li>
+                                <li>• Vendor Application Process with admin approval workflow</li>
+                                <li>• Multi-Service Orchestration with proper error handling</li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-orange-50 dark:bg-orange-900/20 rounded-lg p-6 border-l-4 border-orange-500">
+                            <h3 class="text-xl font-semibold mb-3 text-orange-800 dark:text-orange-300">📊 Data Management</h3>
+                            <ul class="text-gray-700 dark:text-gray-300 space-y-2">
+                                <li>• PostgreSQL Database with proper service isolation</li>
+                                <li>• Normalized Schema Design with foreign key relationships</li>
+                                <li>• Enum-Based Status Management with database constraints</li>
+                                <li>• Audit Trails and comprehensive logging</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Technology Section -->
+                <section id="technology" class="mb-12">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Technology Stack</h2>
+                    
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 mb-6">
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left">
+                                <thead>
+                                    <tr class="border-b border-gray-300 dark:border-gray-600">
+                                        <th class="py-3 px-4 font-semibold text-blue-600">Component</th>
+                                        <th class="py-3 px-4 font-semibold text-blue-600">Technology</th>
+                                        <th class="py-3 px-4 font-semibold text-blue-600">Version</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-gray-700 dark:text-gray-300">
+                                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                                        <td class="py-3 px-4 font-medium">Framework</td>
+                                        <td class="py-3 px-4">Spring Boot</td>
+                                        <td class="py-3 px-4">4.0.0</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                                        <td class="py-3 px-4 font-medium">Language</td>
+                                        <td class="py-3 px-4">Java</td>
+                                        <td class="py-3 px-4">21</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                                        <td class="py-3 px-4 font-medium">Database</td>
+                                        <td class="py-3 px-4">PostgreSQL</td>
+                                        <td class="py-3 px-4">17</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                                        <td class="py-3 px-4 font-medium">Gateway</td>
+                                        <td class="py-3 px-4">Spring Cloud Gateway</td>
+                                        <td class="py-3 px-4">Latest</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                                        <td class="py-3 px-4 font-medium">Security</td>
+                                        <td class="py-3 px-4">Spring Security + JWT</td>
+                                        <td class="py-3 px-4">Latest</td>
+                                    </tr>
+                                    <tr class="border-b border-gray-200 dark:border-gray-700">
+                                        <td class="py-3 px-4 font-medium">Containerization</td>
+                                        <td class="py-3 px-4">Docker + Docker Compose</td>
+                                        <td class="py-3 px-4">Latest</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
+                            <h3 class="text-xl font-semibold mb-4 text-blue-600">Service URLs</h3>
+                            <div class="space-y-2 text-sm">
+                                <div class="flex justify-between">
+                                    <span class="font-medium">API Gateway:</span>
+                                    <span class="text-blue-600">:8080</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="font-medium">Auth Service:</span>
+                                    <span class="text-green-600">:8081</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="font-medium">User Service:</span>
+                                    <span class="text-purple-600">:8083</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="font-medium">Metadata Service:</span>
+                                    <span class="text-orange-600">:8084</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="font-medium">Booking Orchestrator:</span>
+                                    <span class="text-red-600">:8086</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="font-medium">Futsal Service:</span>
+                                    <span class="text-indigo-600">:8087</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
+                            <h3 class="text-xl font-semibold mb-4 text-blue-600">Quick Start</h3>
+                            <div class="bg-gray-900 dark:bg-gray-700 rounded p-3 text-green-400 text-sm">
+                                <pre><code># Clone & Setup
+git clone repo
+./setup.sh
+
+# Docker Deployment
+docker-compose up -d
+
+# Manual Setup
+./full-cycle-test.sh</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Gallery Section -->
+                <section id="gallery" class="mb-12">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Project Gallery</h2>
+                    <div class="bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-800 dark:to-gray-700 rounded-lg p-12 text-center">
+                        <div class="mb-6">
+                            <svg class="w-24 h-24 mx-auto text-blue-600 opacity-50" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/>
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                            🖼️ Screenshots Coming Soon!
+                        </h3>
+                        <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                            We're currently preparing comprehensive screenshots showcasing the microservices dashboard, 
+                            API gateway interface, booking workflows, and real-time monitoring capabilities. 
+                            Check back soon for visual demonstrations of the platform in action!
+                        </p>
+                        <div class="mt-8">
+                            <span class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-lg text-sm font-medium">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                                </svg>
+                                Gallery Update in Progress
+                            </span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Sidebar -->
+            <div class="lg:col-span-1">
+                <div class="sticky top-24">
+                    <!-- Project Info Card -->
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 mb-6 border border-gray-200 dark:border-gray-700">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Project Info</h3>
+                        <div class="space-y-3">
+                            <div>
+                                <span class="font-medium text-gray-600 dark:text-gray-400">Type:</span>
+                                <span class="ml-2 text-gray-900 dark:text-white">Enterprise Microservices</span>
+                            </div>
+                            <div>
+                                <span class="font-medium text-gray-600 dark:text-gray-400">Status:</span>
+                                <span class="ml-2 px-2 py-1 bg-green-100 text-green-800 rounded text-sm">Production Ready</span>
+                            </div>
+                            <div>
+                                <span class="font-medium text-gray-600 dark:text-gray-400">Domain:</span>
+                                <span class="ml-2 text-gray-900 dark:text-white">Booking Management</span>
+                            </div>
+                            <div>
+                                <span class="font-medium text-gray-600 dark:text-gray-400">Services:</span>
+                                <span class="ml-2 text-gray-900 dark:text-white">6 Microservices</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 border border-gray-200 dark:border-gray-700">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Quick Links</h3>
+                        <div class="space-y-3">
+                            <a href="#overview" class="block text-blue-600 hover:text-blue-700 transition-colors">📋 Overview</a>
+                            <a href="#architecture" class="block text-blue-600 hover:text-blue-700 transition-colors">🏗️ Architecture</a>
+                            <a href="#features" class="block text-blue-600 hover:text-blue-700 transition-colors">⭐ Key Features</a>
+                            <a href="#technology" class="block text-blue-600 hover:text-blue-700 transition-colors">🔧 Technology Stack</a>
+                            <a href="#gallery" class="block text-blue-600 hover:text-blue-700 transition-colors">🖼️ Gallery</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
+            <p class="text-gray-600 dark:text-gray-400">
+                <a href="../index.html" class="text-blue-600 hover:text-blue-700 transition-colors">← Back to Portfolio</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Smooth Scrolling Script -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
