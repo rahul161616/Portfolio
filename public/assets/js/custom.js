@@ -12,11 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             const phrases = [
-                "Ethical Hacking Done Right",
-                "Cybersecurity Solutions That Matter",
-                "Defending Your Digital Frontier",
-                "Innovative Security Strategies",
-                "Protecting Your Digital Assets"
+                "Backend Engineer",
+                "AI Enthusiast",
+                "Rahul Sewa"
             ];
 
             let phraseIndex = 0;

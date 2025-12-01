@@ -70,8 +70,8 @@ const Nav: React.FC = () => {
         />
         <span className={`self-center whitespace-nowrap font-bold dark:text-white transition-all duration-300 ${
           isScrolled ? 'text-lg' : 'text-2xl'
-        }`}>
-          HAK3R
+        }`}>Rahul
+          
         </span>
       </Navbar.Brand>
       <div className="flex md:order-2">
@@ -99,19 +99,10 @@ const Nav: React.FC = () => {
         </svg>
         <span className="text-white font-medium">FREE Download</span>
       </a>
-        <button
-          type="button"
-          onClick={() => scrollToSection('contact')}
-          className={`text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:outline-none focus:ring-green-300 font-bold text-center mx-3 md:mr-0 z-10 transition-all duration-300 ${
-            isScrolled ? 'text-sm px-3 py-1.5' : 'text-md px-4 py-2'
-          }`}
-        >
-          Contact Me!
-        </button>
         <Navbar.Toggle />
       </div>
       <Navbar.Collapse>
-        {['home', 'services', 'about', 'contact'].map((section) => (
+        {['home', 'about', 'skills', 'projects', 'contact'].map((section) => (
           <button 
             key={section}
             onClick={() => scrollToSection(section)}
@@ -119,7 +110,7 @@ const Nav: React.FC = () => {
               isScrolled ? 'text-base text-3xl md:text-lg py-2' : 'text-3xl md:text-xl py-2.5'
             }`}
           >
-            {section.charAt(0).toUpperCase() + section.slice(1)}
+            {section === 'about' ? 'About Me' : section.charAt(0).toUpperCase() + section.slice(1)}
           </button>
         ))}
       </Navbar.Collapse>

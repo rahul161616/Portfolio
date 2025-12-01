@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRaiFIC - Traffic Monitoring System | Rahul Sewa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0fdf4',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+    <!-- Navigation -->
+    <nav class="bg-white dark:bg-gray-900 shadow-lg sticky top-0 z-50 border-b border-gray-200 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="../index.html" class="text-2xl font-bold text-green-600 hover:text-green-700 transition-colors">
+                        ← Back to Portfolio
+                    </a>
+                </div>
+                <div class="flex items-center space-x-8">
+                    <a href="#overview" class="text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors font-medium">Overview</a>
+                    <a href="#features" class="text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors font-medium">Features</a>
+                    <a href="#gallery" class="text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors font-medium">Gallery</a>
+                    <a href="#technology" class="text-gray-700 dark:text-gray-300 hover:text-green-600 dark:hover:text-green-400 transition-colors font-medium">Technology</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Main Content -->
+            <div class="lg:col-span-2">
+                <!-- Overview Section -->
+                <section id="overview" class="mb-12">
+                    <div class="flex items-center mb-6">
+                        <svg class="w-10 h-10 mr-4 text-green-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                        </svg>
+                        <h1 class="text-4xl font-bold text-gray-900 dark:text-white">TRaiFIC</h1>
+                    </div>
+                    
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 mb-8">
+                        <h2 class="text-2xl font-semibold mb-4 text-green-600">Introduction</h2>
+                        <p class="text-lg text-gray-700 dark:text-gray-300 mb-4">
+                            TRaiFIC is an <strong>Automatic Number Plate Detection and Character Recognition</strong> system. 
+                            A comprehensive solution used to monitor traffic through computer vision to detect license plates 
+                            on roads, significantly reducing human resources required for traffic management.
+                        </p>
+                        
+                        <div class="bg-green-100 dark:bg-green-900 rounded-lg p-4 mt-6">
+                            <h3 class="text-xl font-semibold mb-3 text-green-800 dark:text-green-200">Main Objectives</h3>
+                            <ul class="list-disc list-inside text-green-700 dark:text-green-300 space-y-2">
+                                <li>Develop a number plate detection and recognition system to monitor traffic</li>
+                                <li>Detect Number Plate from the scene with high accuracy</li>
+                                <li>Perform Character Recognition using advanced AI models</li>
+                                <li>Entry to database of detected number plates for tracking</li>
+                                <li>Search number plate and its violation history</li>
+                                <li>Detect and notify any blacklisted number plates in real-time</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Features Section -->
+                <section id="features" class="mb-12">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Key Features</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border-l-4 border-blue-500">
+                            <h3 class="text-xl font-semibold mb-3 text-blue-800 dark:text-blue-300">Number Plate Detection</h3>
+                            <p class="text-gray-700 dark:text-gray-300">Advanced computer vision algorithms to accurately detect license plates from various angles and lighting conditions.</p>
+                        </div>
+                        
+                        <div class="bg-red-50 dark:bg-red-900/20 rounded-lg p-6 border-l-4 border-red-500">
+                            <h3 class="text-xl font-semibold mb-3 text-red-800 dark:text-red-300">Lane Violation Detection</h3>
+                            <p class="text-gray-700 dark:text-gray-300">Monitors vehicle movement patterns to identify lane violations and improper driving behavior.</p>
+                        </div>
+                        
+                        <div class="bg-yellow-50 dark:bg-yellow-900/20 rounded-lg p-6 border-l-4 border-yellow-500">
+                            <h3 class="text-xl font-semibold mb-3 text-yellow-800 dark:text-yellow-300">Speed Detection</h3>
+                            <p class="text-gray-700 dark:text-gray-300">Real-time speed monitoring to detect vehicles exceeding speed limits and ensure road safety.</p>
+                        </div>
+                        
+                        <div class="bg-purple-50 dark:bg-purple-900/20 rounded-lg p-6 border-l-4 border-purple-500">
+                            <h3 class="text-xl font-semibold mb-3 text-purple-800 dark:text-purple-300">Blacklisting System</h3>
+                            <p class="text-gray-700 dark:text-gray-300">Automatic detection and notification system for blacklisted vehicles with violation history.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Technology Section -->
+                <section id="technology" class="mb-12">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Technology Stack</h2>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
+                            <h3 class="text-xl font-semibold mb-4 text-green-600">AI Backend</h3>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">Python</span>
+                                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">FastAPI</span>
+                                <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">PyTorch</span>
+                                <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm font-medium">YOLOv8</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">OpenCV</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
+                            <h3 class="text-xl font-semibold mb-4 text-green-600">Web Backend</h3>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">PHP</span>
+                                <span class="px-3 py-1 bg-red-100 text-red-800 rounded-full text-sm font-medium">Laravel</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
+                            <h3 class="text-xl font-semibold mb-4 text-green-600">Frontend</h3>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded-full text-sm font-medium">JavaScript</span>
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">Tailwind CSS</span>
+                                <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">HTML/CSS</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
+                            <h3 class="text-xl font-semibold mb-4 text-green-600">Database & Communication</h3>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">MySQL</span>
+                                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">PostgreSQL</span>
+                                <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">WebSockets</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm font-medium">MJPEG</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
+                            <h3 class="text-xl font-semibold mb-4 text-green-600">Development Tools</h3>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">VS Code</span>
+                                <span class="px-3 py-1 bg-orange-100 text-orange-800 rounded-full text-sm font-medium">JupyterLab</span>
+                                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">Online Gantt</span>
+                                <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-medium">Dia</span>
+                                <span class="px-3 py-1 bg-gray-100 text-gray-800 rounded-full text-sm font-medium">MS Word</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Gallery Section -->
+                <section id="gallery" class="mb-12">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Project Gallery</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="relative">
+                            <img src="../assets/images/traific/image13.png" alt="License Plate Detection Demo" class="w-full h-64 object-cover rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent rounded-b-lg p-4">
+                                <h3 class="text-white font-semibold">License Plate Detection Demo</h3>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <img src="../assets/images/traific/image23.png" alt="Web Dashboard Interface" class="w-full h-64 object-cover rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent rounded-b-lg p-4">
+                                <h3 class="text-white font-semibold">Web Dashboard Interface</h3>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <img src="../assets/images/traific/image20.png" alt="Real-time Traffic Monitoring" class="w-full h-64 object-cover rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent rounded-b-lg p-4">
+                                <h3 class="text-white font-semibold">Real-time Traffic Monitoring</h3>
+                            </div>
+                        </div>
+                        <div class="relative">
+                            <img src="../assets/images/traific/image14.png" alt="Violation Detection System" class="w-full h-64 object-cover rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+                            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent rounded-b-lg p-4">
+                                <h3 class="text-white font-semibold">Violation Detection System</h3>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Sidebar -->
+            <div class="lg:col-span-1">
+                <div class="sticky top-24">
+                    <!-- Project Info Card -->
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 mb-6 border border-gray-200 dark:border-gray-700">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Project Info</h3>
+                        <div class="space-y-3">
+                            <div>
+                                <span class="font-medium text-gray-600 dark:text-gray-400">Type:</span>
+                                <span class="ml-2 text-gray-900 dark:text-white">AI/Computer Vision</span>
+                            </div>
+                            <div>
+                                <span class="font-medium text-gray-600 dark:text-gray-400">Status:</span>
+                                <span class="ml-2 px-2 py-1 bg-green-100 text-green-800 rounded text-sm">Completed</span>
+                            </div>
+                            <div>
+                                <span class="font-medium text-gray-600 dark:text-gray-400">Domain:</span>
+                                <span class="ml-2 text-gray-900 dark:text-white">Traffic Management</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 border border-gray-200 dark:border-gray-700">
+                        <h3 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Quick Links</h3>
+                        <div class="space-y-3">
+                            <a href="#overview" class="block text-green-600 hover:text-green-700 transition-colors">📋 Overview</a>
+                            <a href="#features" class="block text-green-600 hover:text-green-700 transition-colors">⭐ Features</a>
+                            <a href="#technology" class="block text-green-600 hover:text-green-700 transition-colors">🔧 Technology Stack</a>
+                            <a href="#gallery" class="block text-green-600 hover:text-green-700 transition-colors">🖼️ Gallery</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-center">
+            <p class="text-gray-600 dark:text-gray-400">
+                <a href="../index.html" class="text-green-600 hover:text-green-700 transition-colors">← Back to Portfolio</a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Smooth Scrolling Script -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
