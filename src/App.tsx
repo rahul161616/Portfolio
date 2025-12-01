@@ -60,7 +60,7 @@ const App: React.FC = () => {
             </svg>
           </a>
           <a
-            href="../public/assets/documents/Rahul_Sewa_2025.pdf" /* PUT YOUR CV DOWNLOAD URL HERE */
+            href="./assets/documents/Rahul_Sewa_2025.pdf"
             download
             target="_blank"
             rel="noopener noreferrer"
@@ -132,8 +132,8 @@ const App: React.FC = () => {
                 My approach combines creative problem-solving with rigorous methodology, ensuring comprehensive security assessments and robust solutions that protect digital assets effectively.
               </p>
               <a 
-                href="/assets/documents/CV_YourName.pdf" 
-                download="YourName_CV.pdf"
+                href="./assets/documents/Rahul_Sewa_2025.pdf" 
+                download="Rahul_Sewa_CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex mt-8 items-center justify-center px-5 py-4 text-base font-medium text-center text-gray-900 border-4 border-green-300 hover:bg-green-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-green-700 dark:hover:bg-green-700 dark:focus:ring-gray-800 transition-all duration-300 hover:scale-105"
@@ -519,7 +519,6 @@ const App: React.FC = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Phone</h3>
                 <p className="text-green-600 font-medium text-lg">
-                  {/* PUT YOUR PHONE NUMBER HERE */}
                   9815158185
                 </p>
                 <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">Mon-Fri 9am-6pm</p>
@@ -534,7 +533,6 @@ const App: React.FC = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Email</h3>
                 <p className="text-green-600 font-medium text-lg">
-                  {/* PUT YOUR EMAIL ADDRESS HERE */}
                   rahulsewa1616@gmail.com
                 </p>
                 <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">24/7 Response</p>
@@ -549,7 +547,6 @@ const App: React.FC = () => {
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Location</h3>
                 <p className="text-green-600 font-medium text-lg">
-                  {/* PUT YOUR ADDRESS HERE */}
                   Pokhara, Nepal
                 </p>
                 <p className="text-gray-500 dark:text-gray-400 text-sm mt-1">Remote Available</p>
