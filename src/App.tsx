@@ -119,13 +119,13 @@ const App: React.FC = () => {
               </h2>
               <br></br>
               <p className="mb-4 text-lg">
-                I'm a passionate cybersecurity professional and full-stack developer with expertise in ethical hacking, penetration testing, and secure application development. My journey began with CTF competitions and has evolved into a comprehensive skill set that bridges security and development.
+                I'm a passionate backend engineer specializing in Spring Boot and enterprise Java development. My journey started with building small applications and has evolved into creating robust, scalable microservices and distributed systems that power modern businesses.
               </p>
               <p className="mb-4 text-lg">
-                With proficiency in multiple programming languages including Python, Java, JavaScript, and PHP, I specialize in identifying vulnerabilities that others miss. I excel at building secure, scalable web applications while maintaining a security-first mindset throughout the development lifecycle.
+                With deep expertise in Spring ecosystem including Spring Boot, Spring Security, Spring Data JPA, and Spring Cloud, I excel at building high-performance RESTful APIs and microservices. I'm proficient in Java, Python, JavaScript, and modern database technologies, always focusing on clean architecture and best practices.
               </p>
               <p className="text-lg">
-                My approach combines creative problem-solving with rigorous methodology, ensuring comprehensive security assessments and robust solutions that protect digital assets effectively.
+                My approach emphasizes scalability, maintainability, and performance optimization, ensuring that applications can handle real-world demands while remaining easy to extend and maintain.
               </p>
               <a 
                 href="./assets/documents/RahulSewa20205.pdf" 
@@ -154,21 +154,22 @@ const App: React.FC = () => {
                 
                 {/* Code Content */}
                 <div className="p-4 font-mono text-sm">
-                  <div className="text-purple-400">const <span className="text-blue-400">developer</span> = {'{'}
+                  <div className="text-purple-400">@<span className="text-blue-400">Component</span>
                   </div>
-                  <div className="ml-4 text-green-400">name: <span className="text-yellow-300">'Rahul Sewa'</span>,</div>
-                  <div className="ml-4 text-green-400">role: <span className="text-yellow-300">'Backend Engineer'</span>,</div>
-                  <div className="ml-4 text-green-400">skills: [</div>
-                  <div className="ml-8 text-yellow-300">'Java', 'Python', 'JavaScript',</div>
-                  <div className="ml-8 text-yellow-300">'Spring Boot', 'PostgreSQL', 'AI'</div>
-                  <div className="ml-4 text-green-400">],</div>
-                  <div className="ml-4 text-green-400">passion: <span className="text-yellow-300">'Problem Solving'</span>,</div>
-                  <div className="ml-4 text-green-400">status: <span className="text-yellow-300">'Available for opportunities'</span></div>
-                  <div className="text-purple-400">{'};'}</div>
+                  <div className="text-purple-400">public class <span className="text-blue-400">Developer</span> {'{'}
+                  </div>
+                  <div className="ml-4 text-green-400">private String name = <span className="text-yellow-300">"Rahul Sewa"</span>;</div>
+                  <div className="ml-4 text-green-400">private String role = <span className="text-yellow-300">"Spring Boot Developer"</span>;</div>
+                  <div className="ml-4 text-green-400">private List&lt;String&gt; skills = Arrays.asList(</div>
+                  <div className="ml-8 text-yellow-300">"Spring Boot", "Spring Security", "JPA",</div>
+                  <div className="ml-8 text-yellow-300">"Microservices", "REST APIs", "PostgreSQL"</div>
+                  <div className="ml-4 text-green-400">);</div>
+                  <div className="ml-4 text-green-400">private String passion = <span className="text-yellow-300">"Building Scalable Systems"</span>;</div>
+                  <div className="text-purple-400">{'}'}</div>
                   
                   {/* Animated cursor */}
                   <div className="mt-2 flex items-center">
-                    <span className="text-gray-400">console.log(developer);</span>
+                    <span className="text-gray-400">System.out.println(developer);</span>
                     <div className="w-2 h-4 bg-green-400 ml-1 animate-pulse"></div>
                   </div>
                 </div>
@@ -178,11 +179,11 @@ const App: React.FC = () => {
               <div className="grid grid-cols-2 gap-4 mt-6">
                 <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg p-4 text-white text-center transform hover:scale-105 transition-all duration-300">
                   <div className="text-2xl font-bold">5+</div>
-                  <div className="text-sm opacity-90">Languages</div>
+                  <div className="text-sm opacity-90">Projects</div>
                 </div>
                 <div className="bg-gradient-to-br from-green-500 to-green-700 rounded-lg p-4 text-white text-center transform hover:scale-105 transition-all duration-300">
-                  <div className="text-2xl font-bold">10+</div>
-                  <div className="text-sm opacity-90">Projects</div>
+                  <div className="text-2xl font-bold">8+</div>
+                  <div className="text-sm opacity-90">Technologies</div>
                 </div>
                 <div className="bg-gradient-to-br from-purple-500 to-purple-700 rounded-lg p-4 text-white text-center transform hover:scale-105 transition-all duration-300">
                   <div className="text-2xl font-bold">∞</div>
