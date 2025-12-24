@@ -177,10 +177,10 @@ const App: React.FC = () => {
 
               {/* Fun Stats Cards */}
               <div className="grid grid-cols-2 gap-4 mt-6">
-                <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg p-4 text-white text-center transform hover:scale-105 transition-all duration-300">
+                {/* <div className="bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg p-4 text-white text-center transform hover:scale-105 transition-all duration-300">
                   <div className="text-2xl font-bold">5+</div>
                   <div className="text-sm opacity-90">Projects</div>
-                </div>
+                </div> */}
                 <div className="bg-gradient-to-br from-green-500 to-green-700 rounded-lg p-4 text-white text-center transform hover:scale-105 transition-all duration-300">
                   <div className="text-2xl font-bold">8+</div>
                   <div className="text-sm opacity-90">Technologies</div>
