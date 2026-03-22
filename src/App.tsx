@@ -61,7 +61,7 @@ const App: React.FC = () => {
             </svg>
           </a>
           <a
-            href="./assets/documents/RahulSewa20205.pdf"
+            href="./assets/documents/RahulSewa2026.pdf"
             download
             target="_blank"
             rel="noopener noreferrer"
@@ -128,7 +128,7 @@ const App: React.FC = () => {
                 My approach emphasizes scalability, maintainability, and performance optimization, ensuring that applications can handle real-world demands while remaining easy to extend and maintain.
               </p>
               <a 
-                href="./assets/documents/RahulSewa20205.pdf" 
+                href="./assets/documents/RahulSewa2026.pdf" 
                 download="Rahul_Sewa_CV.pdf"
                 target="_blank"
                 rel="noopener noreferrer"

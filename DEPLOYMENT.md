@@ -54,7 +54,7 @@ firebase deploy
 - **Build Output**: `dist/` folder
 - **Source Files**: `src/` folder
 - **Assets**: `public/assets/` folder
-- **CV File**: `public/assets/documents/Rahul_Sewa_2025.pdf`
+- **CV File**: `public/assets/documents/RahulSewa2026.pdf`
 
 ## 🌐 What's Working
 ✅ Responsive design  
