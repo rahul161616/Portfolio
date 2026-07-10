@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Progress Checklist</title>
+  <style>
+  /* copied minimal styles from projects-hacker.css to match theme */
+  :root{
+    --bg:#0a0e0f;--panel:#0f1512;--line:#1c2b22;--green:#16a34a;--green-bright:#39ff88;--text:#d7e6dc;--muted:#6b7d72;--amber:#eab308;--orange:#f97316;--red:#ef4444;
+  }
+  html,body{height:100%;margin:0}
+  body{background:var(--bg);color:var(--text);font-family: 'JetBrains Mono', 'Fira Code', ui-monospace, Menlo, Consolas, monospace;padding:48px}
+  .proj-wrap{max-width:980px;margin:0 auto}
+  .proj-card{background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+  .proj-card__bar{display:flex;align-items:center;gap:8px;padding:10px 14px;background:#0d1310;border-bottom:1px solid var(--line)}
+  .dot{width:10px;height:10px;border-radius:50%}
+  .dot.r{background:#ef4444}.dot.y{background:#eab308}.dot.g{background:#22c55e}
+  .log-body{padding:20px}
+  .log-progress__top{display:flex;justify-content:space-between;color:var(--muted);margin-bottom:8px}
+  .log-progress__track{height:8px;background:#0d1712;border-radius:4px;border:1px solid var(--line);overflow:hidden}
+  .log-progress__fill{height:100%;background:linear-gradient(90deg,var(--green),var(--green-bright));width:0%}
+  .chk-row{display:flex;align-items:center;gap:12px;padding:8px 4px;border-radius:4px;cursor:pointer}
+  .chk-box{width:18px;height:18px;border:1px solid var(--muted);border-radius:3px;display:flex;align-items:center;justify-content:center;color:var(--green-bright)}
+  .chk-row.done .chk-box{border-color:var(--green);background:rgba(22,163,74,.12)}
+  .chk-label{flex:1}
+  .threat-seg{width:14px;height:8px;border-radius:1px;background:var(--line);margin-right:3px}
+  .tier{margin-bottom:12px}
+  a.back{display:inline-block;margin-bottom:18px;color:var(--green-bright);text-decoration:none}
+  </style>
+</head>
+<body>
+  <div class="proj-wrap">
+    <a class="back" href="/">← Back to site</a>
+    <article class="proj-card">
+      <div class="proj-card__bar">
+        <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+        <span style="margin-left:8px;color:var(--muted)">game_dev_roadmap.log</span>
+      </div>
+      <div class="log-body">
+        <div class="log-progress">
+          <div class="log-progress__top">
+            <span>modules cleared</span>
+            <span id="progress-text">0 / 16</span>
+          </div>
+          <div class="log-progress__track"><div class="log-progress__fill" id="progress-fill"></div></div>
+        </div>
+
+        <div id="tiers"></div>
+      </div>
+    </article>
+  </div>
+
+  <script>
+  (function(){
+    var challenges = [
+      { name: "Rectangle vs Rectangle", level: 1, done: false },
+      { name: "Circle vs Circle",       level: 1, done: false },
+      { name: "Circle vs Rectangle",    level: 1, done: true },
+      { name: "Player Movement",        level: 1, done: false },
+      { name: "Camera Follow",          level: 1, done: false },
+
+      { name: "Tile Collision",         level: 2, done: false },
+      { name: "Platform Physics",       level: 2, done: false },
+      { name: "Particle System",        level: 2, done: false },
+
+      { name: "A* Pathfinding",         level: 3, done: false },
+      { name: "QuadTree",               level: 3, done: false },
+      { name: "ECS",                    level: 3, done: false },
+      { name: "Animation System",       level: 3, done: false },
+
+      { name: "SAT",                    level: 4, done: false },
+      { name: "GJK",                    level: 4, done: false },
+      { name: "BVH",                    level: 4, done: false },
+
+      { name: "Physics Engine",         level: 5, done: false }
+    ];
+
+    var tierMeta = {
+      1: { label: "low",      color: "var(--green)" },
+      2: { label: "guarded",  color: "var(--green-bright)" },
+      3: { label: "elevated", color: "var(--amber)" },
+      4: { label: "high",     color: "var(--orange)" },
+      5: { label: "critical", color: "var(--red)" }
+    };
+
+    var tiersEl = document.getElementById('tiers');
+    var progressFill = document.getElementById('progress-fill');
+    var progressText = document.getElementById('progress-text');
+
+    function meterHTML(level){
+      var container = document.createElement('div');
+      container.className = 'threat-meter';
+      for(var i=1;i<=5;i++){
+        var seg = document.createElement('div');
+        seg.className = 'threat-seg';
+        seg.style.background = i <= level ? tierMeta[level].color : 'var(--line)';
+        container.appendChild(seg);
+      }
+      var label = document.createElement('span');
+      label.className = 'threat-label';
+      label.style.color = tierMeta[level].color;
+      label.textContent = tierMeta[level].label;
+      container.appendChild(label);
+      return container;
+    }
+
+    function render(){
+      var byLevel = {};
+      challenges.forEach(function(c){ (byLevel[c.level]=byLevel[c.level]||[]).push(c); });
+      tiersEl.innerHTML = '';
+      Object.keys(byLevel).sort().forEach(function(level){
+        var tier = document.createElement('div'); tier.className='tier';
+        var head = document.createElement('div'); head.className='tier__head'; head.textContent = tierMeta[level].label + ' threat';
+        tier.appendChild(head);
+        byLevel[level].forEach(function(c){
+          var row = document.createElement('div'); row.className = 'chk-row' + (c.done? ' done':'');
+          row.style.marginBottom='6px';
+          var box = document.createElement('div'); box.className='chk-box'; box.innerHTML = c.done? '&#10003;':'';
+          var label = document.createElement('div'); label.className='chk-label'; label.textContent = c.name;
+          row.appendChild(box); row.appendChild(label);
+          row.appendChild(meterHTML(c.level));
+          row.addEventListener('click', function(){ c.done = !c.done; render(); });
+          tier.appendChild(row);
+        });
+        tiersEl.appendChild(tier);
+      });
+
+      var done = challenges.filter(function(c){return c.done}).length;
+      progressFill.style.width = (done / challenges.length * 100) + '%';
+      progressText.textContent = done + ' / ' + challenges.length;
+    }
+
+    render();
+  })();
+  </script>
+</body>
+</html>
