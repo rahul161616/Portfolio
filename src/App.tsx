@@ -2,6 +2,8 @@
 import React from "react";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
+import HackerProjects from "./components/HackerProjects";
+import ProgressCard from "./components/ProgressCard";
 import "./particles.css";
 import heroImage from "/assets/images/man-developing-website-on-desk.svg"; 
 
@@ -195,6 +197,8 @@ const App: React.FC = () => {
                 </div>
               </div>
             </div>
+
+            {/* HAK3R projects: insert into the main grid so they appear with other projects */}
           </div>
         </section>
 
@@ -470,6 +474,10 @@ const App: React.FC = () => {
                   </a>
                 </div>
               </div>
+
+                {/* HAK3R fragment: two hacker-style projects + progressions card */}
+                <HackerProjects />
+                <ProgressCard />
             </div>
           </div>
         </section>
