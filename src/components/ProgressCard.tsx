@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./projects-hacker.css";
 
 type Challenge = { name: string; level: number; done: boolean };
@@ -26,20 +26,8 @@ const initialChallenges: Challenge[] = [
   { name: "Physics Engine", level: 5, done: false },
 ];
 
-const tierMeta: Record<number, { label: string; color: string }> = {
-  1: { label: "low", color: "var(--green)" },
-  2: { label: "guarded", color: "var(--green-bright)" },
-  3: { label: "elevated", color: "var(--amber)" },
-  4: { label: "high", color: "var(--orange)" },
-  5: { label: "critical", color: "var(--red)" },
-};
-
 const ProgressCard: React.FC = () => {
-  const [challenges, setChallenges] = useState<Challenge[]>(initialChallenges);
-
-  const toggle = (name: string) =>
-    setChallenges((prev) => prev.map((c) => (c.name === name ? { ...c, done: !c.done } : c)));
-
+  const challenges = initialChallenges;
   const doneCount = challenges.filter((c) => c.done).length;
 
   return (
