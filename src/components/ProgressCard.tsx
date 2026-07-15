@@ -5,7 +5,7 @@ type Challenge = { name: string; level: number; done: boolean };
 
 const initialChallenges: Challenge[] = [
   { name: "Rectangle vs Rectangle", level: 1, done: false },
-  { name: "Circle vs Circle", level: 1, done: false },
+  { name: "Circle vs Circle", level: 1, done: true },
   { name: "Circle vs Rectangle", level: 1, done: true },
   { name: "Player Movement", level: 1, done: false },
   { name: "Camera Follow", level: 1, done: false },
