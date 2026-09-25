@@ -92,10 +92,10 @@ const Footer: React.FC = () => {
               </svg>
             </a>
 
-            {/* Privacy Policy */}
-            {/* <a href="./privacy-policy.html" className="ml-4 text-sm text-gray-500 hover:text-gray-900 dark:hover:text-white hover:underline transition-all duration-300"> */}
-              {/* Privacy Policy */}
-            {/* </a> */}
+            <div className="ml-4 flex gap-3 text-sm">
+              <a href="./privacy-policy.html" className="text-gray-500 hover:text-gray-900 hover:underline dark:hover:text-white">Privacy</a>
+              <a href="./terms-of-service.html" className="text-gray-500 hover:text-gray-900 hover:underline dark:hover:text-white">Terms</a>
+            </div>
           </div>
         </div>
       </footer>
